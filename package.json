@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/chroma-js": "^2.4.3",
+    "@types/nprogress": "^0.2.3",
+    "turbo": "^1.11.3"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "node apps/api/dist/main"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@mui/lab": "^5.0.0-alpha.163",
+    "@mui/system": "^5.15.7",
+    "@mui/x-data-grid": "^6.19.3",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "chroma-js": "^2.4.2",
+    "context": "^3.0.25",
+    "date-fns": "^3.3.1",
+    "jwt-decode": "^4.0.0",
+    "nprogress": "^0.2.0",
+    "react-custom-scrollbars-2": "^4.5.0",
+    "react-helmet-async": "^2.0.4",
+    "react-router-dom": "^6.21.3"
+  }
+}

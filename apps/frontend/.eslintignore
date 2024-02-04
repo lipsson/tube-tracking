@@ -1,0 +1,6 @@
+node_modules
+build
+coverage
+.eslintrc.js
+.babel.config.js
+config-overrides.js

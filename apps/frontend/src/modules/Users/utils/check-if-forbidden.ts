@@ -1,0 +1,1 @@
+export const checkIfForbidden = (id: string) => !(id === '65be9074cbfde022608539d3')

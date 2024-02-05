@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
-    "@types/chroma-js": "^2.4.3",
     "@types/nprogress": "^0.2.3",
     "turbo": "^1.11.3"
   },

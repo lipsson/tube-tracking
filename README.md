@@ -18,9 +18,10 @@ in the main directory:
 # frontend-tree.txt
 
 skrypty/scripts:
-
 w głównym katalogu/in the main directory:
+
 */ start dev /*
+
 `linux/macos`
 # ./start-dev.sh
 
@@ -31,6 +32,7 @@ w głównym katalogu/in the main directory:
 # npm run dev
 
 */ start build & start production /*
+
 `linux/macos`
 # ./start-build.sh
 
@@ -41,6 +43,7 @@ w głównym katalogu/in the main directory:
 # npm run build && npm start
 
 w apps/api | w apps/frontend:
+
 */ start dev /*
 # npm run dev
 

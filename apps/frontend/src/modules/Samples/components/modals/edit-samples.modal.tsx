@@ -42,6 +42,7 @@ export const EditSampleModal: FC<{ onClose: () => void, _id: string }> = ({ onCl
       isSubmitting={editSamplesMutation.isLoading}
       onSubmit={() => onSubmit}
       maxWidth="xl"
+      dataTestId='edit-sample-details-samples'
     >
       <Typography textAlign="center">{`Id: ${_id}`}</Typography>
     </Dialogs>

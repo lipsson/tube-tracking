@@ -1,17 +1,9 @@
 import { Chip } from '@mui/material';
 import { stringToColor } from '../utils/string-to-color';
+import { ChipStatusesType } from '../types/chip-statuses.types';
+import { FC } from 'react';
 
-
-type ChipStatusesProps = {
-  value: boolean | string;
-  type?: 'success' | 'info';
-  textSuccess: string;
-  textDecline?: string;
-  fontSize?: number;
-  fontWeight?: number;
-};
-
-export const ChipStatuses = (props: ChipStatusesProps) => {
+export const ChipStatuses: FC<ChipStatusesType> = (props) => {
   const { fontSize = 12, fontWeight = 600, textDecline = '', type = 'success' } = props;
   const colorSuccess = type === 'success' ? 'success.main' : 'info.main';
   const colorDecline = type === 'success' ? 'error.main' : 'warning.main';

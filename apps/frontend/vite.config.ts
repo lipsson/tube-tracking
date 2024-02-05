@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
@@ -17,6 +20,18 @@ export default defineConfig({
     alias: [
       { find: '@', replacement: resolve(__dirname, 'src') },
     ],
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    coverage: {
+      provider: 'v8',
+      reporter: ["text", "html"],
+    },
+    alias: {
+      '@/': new URL('./src/', import.meta.url).pathname,
+    },
+    setupFiles: "./src/test/setupTests.ts",
   },
 
   plugins: [react()],

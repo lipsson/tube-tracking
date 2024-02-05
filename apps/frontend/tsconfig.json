@@ -50,11 +50,12 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": false,
     "experimentalDecorators": false,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": [
     "src/**/*",
-    "src/mswConfig",
+    "src/test/setup.ts",
     "public"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -21,7 +21,7 @@ export const PageHeader = ({ header }: { header: HeaderType }) => {
                         <BackToList text="actions.backToList" to='/' />
                     </Grid>
                     <Grid item xs={6}>
-                        <Typography variant="h3" align='center' component="h3" gutterBottom>
+                        <Typography data-testid='page-header-title' variant="h3" align='center' component="h3" gutterBottom>
                             {title}
                         </Typography>
                         {subtitle && <Typography variant="subtitle2">{subtitle}</Typography>}

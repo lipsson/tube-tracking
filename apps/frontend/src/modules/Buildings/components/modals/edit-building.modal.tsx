@@ -42,6 +42,8 @@ export const EditBuildingModal: FC<{ onClose: () => void, _id: string }> = ({ on
       isSubmitting={editBuilldingMutation.isLoading}
       onSubmit={() => onSubmit}
       maxWidth="xl"
+      dataTestId='edit-buliding'
+
     >
       <Typography textAlign="center">test</Typography>
     </Dialogs>

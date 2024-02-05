@@ -146,7 +146,7 @@ export const SamplesTable = ({ data, buildingsList, labWorkers, isLoading }:
   }
 
   return (
-    <Card>
+    <Card data-testid='table-samples'>
       <Table
         {...tableData}
         isLoading={isLoading}

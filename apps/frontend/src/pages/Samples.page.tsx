@@ -4,6 +4,7 @@ import { useSamplesListQuery } from '@/modules/Samples/api/queries/use-sample-li
 import { DashboardTable } from './components/dashboard-table/dashboard-table';
 import { StatusArray } from '@/modules/Samples/utils/status-array';
 import { useTranslation } from 'react-i18next';
+import { Box } from '@mui/material';
 
 export const SamplesPage = () => {
     const { data, isLoading } = useSamplesListQuery();
@@ -14,32 +15,34 @@ export const SamplesPage = () => {
     }
 
     return (
-        <DashboardTable
-            total={data?.length ?? 0}
-            color="#5568FF"
-            title={t('dashboard.newSamples')}
-            rows={data?.slice(0, 5) || []}
-            linkToTable={'/samples'}
-            getLink={() => '/samples'}
-            icon={'\uf493'}
-            columns={{
-                name: {
-                    row: (row) => row.name,
-                    header: () => t('input.name'),
-                },
-                patientId: {
-                    row: (row) => row.patientId,
-                    header: () => t('input.patientId'),
-                    align: 'center',
-                },
-                status: {
-                    header: () => t('input.status'),
-                    row: (row) => ChipStatuses({
-                        value: StatusArray[row.status] || 'draft',
-                        textSuccess: `${t(`status.${StatusArray[row.status] || 'draft'}`)}`,
-                    }),
-                },
-            }}
-        />
+        <Box data-testid='dashb-table-samples'>
+            <DashboardTable
+                total={data?.length ?? 0}
+                color="#5568FF"
+                title={t('dashboard.newSamples')}
+                rows={data?.slice(0, 5) || []}
+                linkToTable={'/samples'}
+                getLink={() => '/samples'}
+                icon={'\uf493'}
+                columns={{
+                    name: {
+                        row: (row) => row.name,
+                        header: () => t('input.name'),
+                    },
+                    patientId: {
+                        row: (row) => row.patientId,
+                        header: () => t('input.patientId'),
+                        align: 'center',
+                    },
+                    status: {
+                        header: () => t('input.status'),
+                        row: (row) => ChipStatuses({
+                            value: StatusArray[row.status] || 'draft',
+                            textSuccess: `${t(`status.${StatusArray[row.status] || 'draft'}`)}`,
+                        }),
+                    },
+                }}
+            />
+        </Box>
     );
 };

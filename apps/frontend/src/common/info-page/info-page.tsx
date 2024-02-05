@@ -1,10 +1,10 @@
 import { Box, Card, CardHeader, Divider, Grid, Typography } from '@mui/material'
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 export const InfoPage: FC<{
     title: string, infoData: {
         title: string;
-        desc: JSX.Element | string;
+        desc: JSX.Element | ReactNode | string;
     }[]
 }> = ({ title, infoData }) => {
     return (

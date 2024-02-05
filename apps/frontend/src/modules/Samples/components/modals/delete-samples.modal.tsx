@@ -45,6 +45,7 @@ export const DeleteSampleModal: FC<{ onClose: () => void, _id: string }> = ({ on
       declineLabel={t('actions.cancel')}
       onSubmit={onSubmit}
       isSubmitting={deleteSamplesMutation.isLoading}
+      dataTestId='delete-sample-details-samples'
     >
       <Typography textAlign="center">{`${t('actions.delete')} ${t('input.samples')} ${_id}?`}</Typography>
     </Dialogs>

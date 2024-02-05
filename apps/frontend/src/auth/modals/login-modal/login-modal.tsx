@@ -50,13 +50,14 @@ export const LoginModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       declineLabel={t('actions.cancel')}
       onSubmit={onSubmit}
     >
-      <Box sx={{ mt: '24px' }}>
+      <Box data-testid='login-page' sx={{ mt: '24px' }}>
         <Divider>
           <Chip label={t('input.username')} size="small" />
         </Divider>
         <Box sx={{ my: 3 }}>
           <TextField
             name="email"
+            inputProps={{ 'data-testid': 'login-email' }}
             required
             id="outlined-required"
             label={`${t('input.username')}`}
@@ -65,7 +66,6 @@ export const LoginModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             fullWidth
           />
         </Box>
-
         <Divider>
           <Chip label={t('input.password')} variant="outlined" size="small" />
         </Divider>
@@ -78,12 +78,10 @@ export const LoginModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             onChange={(e) => setData((prevValues) => ({ ...prevValues, password: e.target.value }))}
             autoComplete=""
             fullWidth
+            inputProps={{ 'data-testid': 'login-password' }}
           />
         </Box>
-
       </Box>
-
-
     </Dialogs>
 
   );

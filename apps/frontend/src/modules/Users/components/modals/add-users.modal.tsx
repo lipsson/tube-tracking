@@ -42,6 +42,7 @@ export const AddUsersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       isSubmitting={addUserMutation.isLoading}
       onSubmit={() => onSubmit}
       maxWidth="xl"
+      dataTestId='add-users'
     >
       <Typography textAlign="center">test</Typography>
     </Dialogs>

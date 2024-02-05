@@ -17,7 +17,7 @@ export const EditLabWorkersModal: FC<{ onClose: () => void, _id: string }> = ({ 
 
   const onSubmit = (data: AddOrEditLabWorkersType) => {
     editLabWorkerMutation.mutate(
-      { _id, ...data },
+      { _id, ...data, updatedAt: new Date().toUTCString() },
       {
         onSuccess: async () => {
           showAlert({ type: 'success', title: t('apiResponse.success') });
@@ -43,6 +43,7 @@ export const EditLabWorkersModal: FC<{ onClose: () => void, _id: string }> = ({ 
       isSubmitting={editLabWorkerMutation.isLoading}
       onSubmit={() => onSubmit}
       maxWidth="xl"
+      dataTestId='edit-labWorkers'
     >
       <Typography textAlign="center">test</Typography>
     </Dialogs>

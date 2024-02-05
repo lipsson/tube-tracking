@@ -11,7 +11,7 @@ export const DashboardUserPage = () => {
   const { t } = useTranslation();
 
   return (
-    <Grid container sx={{ overflowY: 'auto', height: '100%', m: 0, width: '100%' }} flexDirection="column">
+    <Grid data-testid='dashb-admin' container sx={{ overflowY: 'auto', height: '100%', m: 0, width: '100%' }} flexDirection="column">
       <Grid container flexDirection="row">
         <Grid container flexBasis="100%" flexDirection="column" flexGrow={1}>
           <GridHeaderStyle>{`${t('dashboard.dashboard')}:`}</GridHeaderStyle>

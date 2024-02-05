@@ -18,7 +18,7 @@ export const SampleDetalisPreview = ({ data, buildingsList, labWorkers, isLoadin
   buildingsList: BuildingType[],
   labWorkers: LabWorkersType[],
   isLoading: boolean,
-  action: (action: "EDIT" | "DELETE") => void
+  action: (action: "EDIT" | "DELETE" | null) => void
 }) => {
   const { t } = useTranslation();
 
@@ -59,7 +59,7 @@ export const SampleDetalisPreview = ({ data, buildingsList, labWorkers, isLoadin
       title: t('input.updateAt'),
       desc: data.updatedAt || t('actions.noData')
     }
-  ]
+  ];
 
   return (
     <Grid container
@@ -67,17 +67,18 @@ export const SampleDetalisPreview = ({ data, buildingsList, labWorkers, isLoadin
       justifyContent="center"
       alignItems="stretch"
       p={2}
-      spacing={2}>
+      spacing={2}
+      data-testid='sample-details-samples'
+    >
       <Grid item xs={3}>
         <BackToList text="actions.backToList" to='/samples' sx={{ mb: 3 }} />
       </Grid>
       <Grid item xs={6} />
-
       <Grid item xs={3} textAlign="right">
         <Button sx={{ mx: 1 }} variant="contained" onClick={handleEdit}>{t('actions.edit')}</Button>
         <Button sx={{ mx: 1 }} variant="contained" onClick={handleDelete}>{t('actions.delete')}</Button>
       </Grid>
-      <Grid item xs={12}><Typography variant='h3' align='center'>{`${data.name} - id: ${data._id}`}</Typography></Grid>
+      <Grid item xs={12}><Typography variant='h3' align='center' data-testid='title-sample-details'>{`${data.name} - id: ${data._id}`}</Typography></Grid>
       <Grid item xs={12}>
         <TimelineSample title={t('input.path')} dataArray={dataArray} />
       </Grid>

@@ -13,7 +13,7 @@ import { Loading } from "@/common/loading/loading";
 import { UsersType } from "../types/users.types";
 import { checkIfForbidden } from "../utils/check-if-forbidden";
 
-export const SamplesTable = ({ data, isLoading }: { data: UsersType[] | undefined, isLoading: boolean }) => {
+export const UsersTable = ({ data, isLoading }: { data: UsersType[] | undefined, isLoading: boolean }) => {
   const { t } = useTranslation();
   const { sortModel, ...tableData } = useTable({ pageSize: 50, sortModel: ['category', 'asc'] });
   const [actionsModalState, setActionsModalState] = useState<ActionsModalState>({
@@ -93,7 +93,7 @@ export const SamplesTable = ({ data, isLoading }: { data: UsersType[] | undefine
   }
 
   return (
-    <Card>
+    <Card data-testid='table-users'>
       <Table
         {...tableData}
         isLoading={isLoading}

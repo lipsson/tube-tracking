@@ -44,6 +44,7 @@ export const DeleteBulidingModal: FC<{ onClose: () => void, _id: string }> = ({ 
       declineLabel={t('actions.cancel')}
       onSubmit={onSubmit}
       isSubmitting={deleteBuilldingMutation.isLoading}
+      dataTestId='delete-buliding'
     >
       <Typography textAlign="center">{`${t('actions.delete')} ${t('input.building')} ${_id}?`}</Typography>
     </Dialogs>

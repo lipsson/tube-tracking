@@ -108,7 +108,7 @@ export const BuildingsTable = ({ data, isLoading }: { data: BuildingType[] | und
   }
 
   return (
-    <Card>
+    <Card data-testid='table-buildings'>
       <Table
         {...tableData}
         isLoading={isLoading}

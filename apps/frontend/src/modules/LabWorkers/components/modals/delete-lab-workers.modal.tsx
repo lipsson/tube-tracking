@@ -44,6 +44,7 @@ export const DeleteLabWorkersModal: FC<{ onClose: () => void, _id: string }> = (
       declineLabel={t('actions.cancel')}
       onSubmit={onSubmit}
       isSubmitting={deleteLabWorkerMutation.isLoading}
+      dataTestId='delete-labWorkers'
     >
       <Typography textAlign="center">{`${t('actions.delete')} ${t('input.lab-worker')} ${_id}?`}</Typography>
     </Dialogs>

@@ -18,7 +18,7 @@ export const SampleDetalisPreview = ({ data, buildingsList, labWorkers, isLoadin
   buildingsList: BuildingType[],
   labWorkers: LabWorkersType[],
   isLoading: boolean,
-  action: (action: "EDIT" | "DELETE" | null) => void
+  action: (action: "EDIT" | "DELETE" | "NONE") => void
 }) => {
   const { t } = useTranslation();
 

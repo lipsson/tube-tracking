@@ -1,0 +1,214 @@
+api
+├── .env
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc
+├── README.md
+├── dist
+│   ├── app.module.d.ts
+│   ├── app.module.js
+│   ├── app.module.js.map
+│   ├── auth
+│   │   ├── controller
+│   │   │   ├── auth.controller.d.ts
+│   │   │   ├── auth.controller.js
+│   │   │   └── auth.controller.js.map
+│   │   ├── dto
+│   │   │   ├── login.dto.d.ts
+│   │   │   ├── login.dto.js
+│   │   │   └── login.dto.js.map
+│   │   ├── modules
+│   │   │   ├── auth.module.d.ts
+│   │   │   ├── auth.module.js
+│   │   │   └── auth.module.js.map
+│   │   ├── services
+│   │   │   ├── auth.service.d.ts
+│   │   │   ├── auth.service.js
+│   │   │   └── auth.service.js.map
+│   │   └── utils
+│   │       ├── jwt.strategy.d.ts
+│   │       ├── jwt.strategy.js
+│   │       └── jwt.strategy.js.map
+│   ├── building
+│   │   ├── controller
+│   │   │   ├── building.controller.d.ts
+│   │   │   ├── building.controller.js
+│   │   │   └── building.controller.js.map
+│   │   ├── dto
+│   │   │   ├── add-building.d.ts
+│   │   │   ├── add-building.js
+│   │   │   ├── add-building.js.map
+│   │   │   ├── update-building.d.ts
+│   │   │   ├── update-building.js
+│   │   │   └── update-building.js.map
+│   │   ├── modules
+│   │   │   ├── building.module.d.ts
+│   │   │   ├── building.module.js
+│   │   │   └── building.module.js.map
+│   │   ├── schema
+│   │   │   ├── building.schema.d.ts
+│   │   │   ├── building.schema.js
+│   │   │   └── building.schema.js.map
+│   │   └── services
+│   │       ├── building.service.d.ts
+│   │       ├── building.service.js
+│   │       └── building.service.js.map
+│   ├── lab-workers
+│   │   ├── controller
+│   │   │   ├── lab-workers.controller.d.ts
+│   │   │   ├── lab-workers.controller.js
+│   │   │   └── lab-workers.controller.js.map
+│   │   ├── dto
+│   │   │   ├── add-person.d.ts
+│   │   │   ├── add-person.js
+│   │   │   ├── add-person.js.map
+│   │   │   ├── update-person.d.ts
+│   │   │   ├── update-person.js
+│   │   │   └── update-person.js.map
+│   │   ├── module
+│   │   │   ├── lab-workers.module.d.ts
+│   │   │   ├── lab-workers.module.js
+│   │   │   └── lab-workers.module.js.map
+│   │   ├── schema
+│   │   │   ├── lad-workers.schema.d.ts
+│   │   │   ├── lad-workers.schema.js
+│   │   │   └── lad-workers.schema.js.map
+│   │   └── services
+│   │       ├── lab-workers.service.d.ts
+│   │       ├── lab-workers.service.js
+│   │       └── lab-workers.service.js.map
+│   ├── main.d.ts
+│   ├── main.js
+│   ├── main.js.map
+│   ├── samples
+│   │   ├── controller
+│   │   │   ├── samples.controller.d.ts
+│   │   │   ├── samples.controller.js
+│   │   │   └── samples.controller.js.map
+│   │   ├── dto
+│   │   │   ├── add-sample.d.ts
+│   │   │   ├── add-sample.js
+│   │   │   ├── add-sample.js.map
+│   │   │   ├── update-sample.d.ts
+│   │   │   ├── update-sample.js
+│   │   │   └── update-sample.js.map
+│   │   ├── module
+│   │   │   ├── samples.module.d.ts
+│   │   │   ├── samples.module.js
+│   │   │   └── samples.module.js.map
+│   │   ├── schema
+│   │   │   ├── samples.schema.d.ts
+│   │   │   ├── samples.schema.js
+│   │   │   └── samples.schema.js.map
+│   │   ├── services
+│   │   │   ├── samples.service.d.ts
+│   │   │   ├── samples.service.js
+│   │   │   └── samples.service.js.map
+│   │   └── types
+│   │       ├── statuses.types.d.ts
+│   │       ├── statuses.types.js
+│   │       └── statuses.types.js.map
+│   ├── tsconfig.build.tsbuildinfo
+│   └── users
+│       ├── controller
+│       │   ├── users.controller.d.ts
+│       │   ├── users.controller.js
+│       │   └── users.controller.js.map
+│       ├── dto
+│       │   ├── add-user.d.ts
+│       │   ├── add-user.js
+│       │   └── add-user.js.map
+│       ├── middleware
+│       │   ├── hash-password.d.ts
+│       │   ├── hash-password.js
+│       │   └── hash-password.js.map
+│       ├── module
+│       │   ├── users.module.d.ts
+│       │   ├── users.module.js
+│       │   └── users.module.js.map
+│       ├── schema
+│       │   ├── users.schema.d.ts
+│       │   ├── users.schema.js
+│       │   └── users.schema.js.map
+│       └── services
+│           ├── users.service.d.ts
+│           ├── users.service.js
+│           └── users.service.js.map
+├── nest-cli.json
+├── package-lock.json
+├── package.json
+├── src
+│   ├── app.module.ts
+│   ├── auth
+│   │   ├── controller
+│   │   │   └── auth.controller.ts
+│   │   ├── dto
+│   │   │   └── login.dto.ts
+│   │   ├── modules
+│   │   │   └── auth.module.ts
+│   │   ├── services
+│   │   │   ├── auth.service.spec.ts
+│   │   │   └── auth.service.ts
+│   │   └── utils
+│   │       └── jwt.strategy.ts
+│   ├── building
+│   │   ├── controller
+│   │   │   └── building.controller.ts
+│   │   ├── dto
+│   │   │   ├── add-building.ts
+│   │   │   └── update-building.ts
+│   │   ├── modules
+│   │   │   └── building.module.ts
+│   │   ├── schema
+│   │   │   └── building.schema.ts
+│   │   └── services
+│   │       ├── building.service.spec.ts
+│   │       └── building.service.ts
+│   ├── lab-workers
+│   │   ├── controller
+│   │   │   └── lab-workers.controller.ts
+│   │   ├── dto
+│   │   │   ├── add-person.ts
+│   │   │   └── update-person.ts
+│   │   ├── module
+│   │   │   └── lab-workers.module.ts
+│   │   ├── schema
+│   │   │   └── lad-workers.schema.ts
+│   │   └── services
+│   │       ├── lab-workers.service.spec.ts
+│   │       └── lab-workers.service.ts
+│   ├── main.ts
+│   ├── samples
+│   │   ├── controller
+│   │   │   └── samples.controller.ts
+│   │   ├── dto
+│   │   │   ├── add-sample.ts
+│   │   │   └── update-sample.ts
+│   │   ├── module
+│   │   │   └── samples.module.ts
+│   │   ├── schema
+│   │   │   └── samples.schema.ts
+│   │   ├── services
+│   │   │   ├── samples.service.spec.ts
+│   │   │   └── samples.service.ts
+│   │   └── types
+│   │       └── statuses.types.ts
+│   └── users
+│       ├── controller
+│       │   └── users.controller.ts
+│       ├── dto
+│       │   └── add-user.ts
+│       ├── middleware
+│       │   └── hash-password.ts
+│       ├── module
+│       │   └── users.module.ts
+│       ├── schema
+│       │   └── users.schema.ts
+│       └── services
+│           ├── users.service.spec.ts
+│           └── users.service.ts
+├── test
+│   ├── app.e2e-spec.ts
+│   └── jest-e2e.json
+├── tsconfig.build.json
+└── tsconfig.json

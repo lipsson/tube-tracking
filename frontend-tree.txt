@@ -1,0 +1,339 @@
+frontend
+├── .env
+├── .eslintignore
+├── .eslintrc.js
+├── .gitignore
+├── .prettierignore
+├── .prettierrc.json
+├── README.md
+├── coverage
+│   └── .tmp
+│       ├── coverage-128.json
+│       ├── coverage-129.json
+│       ├── coverage-130.json
+│       ├── coverage-131.json
+│       └── coverage-132.json
+├── index.html
+├── package.json
+├── public
+│   ├── .DS_Store
+│   ├── assets
+│   │   ├── blood-sample.png
+│   │   ├── images
+│   │   │   ├── avatar.png
+│   │   │   ├── avatar2.png
+│   │   │   ├── scientist.png
+│   │   │   └── scientist2.png
+│   │   └── status
+│   │       ├── 404.svg
+│   │       ├── 500.svg
+│   │       ├── coming-soon.svg
+│   │       └── maintenance.svg
+│   ├── fonts
+│   │   ├── fa-solid-900.ttf
+│   │   ├── fa-solid-900.woff2
+│   │   └── fonts.d.ts
+│   └── locales
+│       ├── .DS_Store
+│       ├── en
+│       │   └── translation.json
+│       └── pl
+│           └── translation.json
+├── src
+│   ├── App.tsx
+│   ├── api
+│   │   ├── http-client.ts
+│   │   ├── http-client.types.ts
+│   │   ├── index.ts
+│   │   ├── types
+│   │   │   └── api-error.type.ts
+│   │   └── utils
+│   │       └── api-error.utils.ts
+│   ├── assets
+│   │   └── theme
+│   │       ├── ThemeProvider.tsx
+│   │       ├── base.ts
+│   │       ├── globals.ts
+│   │       └── schema
+│   │           └── PureLightTheme.ts
+│   ├── auth
+│   │   ├── api
+│   │   │   ├── dto
+│   │   │   │   └── auth.dto.ts
+│   │   │   └── mutations
+│   │   │       └── use-sign-in.mutation.ts
+│   │   ├── auth-guard.layout.tsx
+│   │   ├── hooks
+│   │   │   ├── index.ts
+│   │   │   └── use-auth.ts
+│   │   ├── index.ts
+│   │   ├── modals
+│   │   │   └── login-modal
+│   │   │       ├── login-modal.tsx
+│   │   │       ├── test
+│   │   │       │   └── login-modal.test.tsx
+│   │   │       ├── types
+│   │   │       │   └── login.types.ts
+│   │   │       └── utils
+│   │   │           └── login-page.utils.ts
+│   │   ├── providers
+│   │   │   ├── auth-context.provider.reducer.ts
+│   │   │   ├── auth-context.provider.tsx
+│   │   │   ├── auth-context.provider.types.ts
+│   │   │   ├── auth-context.provider.utils.ts
+│   │   │   └── index.ts
+│   │   └── types
+│   │       └── auth.types.ts
+│   ├── common
+│   │   ├── alert
+│   │   │   ├── hooks
+│   │   │   │   └── use-alert.ts
+│   │   │   ├── index.ts
+│   │   │   ├── providers
+│   │   │   │   └── alert-context.provider.tsx
+│   │   │   └── types
+│   │   │       └── alert.types.ts
+│   │   ├── back-to-list
+│   │   │   └── back-to-list.tsx
+│   │   ├── chip-statuses
+│   │   │   └── chip-statuses.tsx
+│   │   ├── dialogs
+│   │   │   ├── dialogs.tsx
+│   │   │   └── dialogs.types.ts
+│   │   ├── feeds
+│   │   │   └── feeds.tsx
+│   │   ├── hooks
+│   │   │   └── use-current-language.ts
+│   │   ├── info-page
+│   │   │   └── info-page.tsx
+│   │   ├── link-to-action
+│   │   │   └── link-to-action.tsx
+│   │   ├── loading
+│   │   │   └── loading.tsx
+│   │   ├── no-data
+│   │   │   └── no-data.tsx
+│   │   ├── query-client
+│   │   │   ├── index.ts
+│   │   │   └── query-client.ts
+│   │   ├── styles
+│   │   │   └── main-content.styles.tsx
+│   │   ├── tables
+│   │   │   ├── components
+│   │   │   │   └── table-no-rows-overlay
+│   │   │   │       └── table-no-rows-overlay.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── simple-table.tsx
+│   │   │   ├── table.tsx
+│   │   │   └── use-table.ts
+│   │   ├── timeline
+│   │   │   └── timeline.tsx
+│   │   ├── types
+│   │   │   ├── actions-modal-state.ts
+│   │   │   ├── back-to-list.ts
+│   │   │   ├── children-element.types.ts
+│   │   │   ├── chip-statuses.types.ts
+│   │   │   ├── pagination-data.type.ts
+│   │   │   └── statuses.types.ts
+│   │   └── utils
+│   │       ├── convert-empty-string-to-null.ts
+│   │       ├── setup-yup.ts
+│   │       └── string-to-color.ts
+│   ├── components
+│   │   ├── logo
+│   │   │   └── logo.tsx
+│   │   ├── logo-image
+│   │   │   └── logo-image.tsx
+│   │   ├── page-header
+│   │   │   └── page-header.tsx
+│   │   ├── page-title
+│   │   │   └── page-title.tsx
+│   │   ├── page-title-wrapper
+│   │   │   └── page-title-wrapper.tsx
+│   │   ├── scrollbar
+│   │   │   └── scrollbar.tsx
+│   │   ├── styles
+│   │   │   ├── logo.styles.tsx
+│   │   │   └── page.styles.tsx
+│   │   ├── suspense-loader
+│   │   │   └── suspense-loader.tsx
+│   │   └── types
+│   │       ├── header.types.ts
+│   │       └── scrollbar.types.ts
+│   ├── contexts
+│   │   └── sidebar.context.tsx
+│   ├── environment.ts
+│   ├── i18n.js
+│   ├── index.css
+│   ├── layout
+│   │   ├── layout.tsx
+│   │   ├── sidebar-layout
+│   │   │   ├── header
+│   │   │   │   ├── header.layout.tsx
+│   │   │   │   ├── lang
+│   │   │   │   │   └── lang.tsx
+│   │   │   │   └── userbox
+│   │   │   │       └── userbox.tsx
+│   │   │   ├── sidebar
+│   │   │   │   ├── sidebar-menu
+│   │   │   │   │   ├── sidebar-menu-item.tsx
+│   │   │   │   │   └── sidebar-menu.tsx
+│   │   │   │   └── sidebar.tsx
+│   │   │   └── sidebar.layout.tsx
+│   │   └── styles
+│   │       ├── header.styles.tsx
+│   │       ├── layout.styles.tsx
+│   │       ├── menu.styles.tsx
+│   │       ├── sidebar.styles.tsx
+│   │       └── userbox.styles.tsx
+│   ├── main.tsx
+│   ├── modules
+│   │   ├── Buildings
+│   │   │   ├── api
+│   │   │   │   ├── dto
+│   │   │   │   │   └── building.dto.ts
+│   │   │   │   ├── mutations
+│   │   │   │   │   ├── use-add-building.mutation.ts
+│   │   │   │   │   ├── use-delete-building.mutation.ts
+│   │   │   │   │   └── use-edit-building.mutation.ts
+│   │   │   │   └── queries
+│   │   │   │       └── use-bulidings-list.query.ts
+│   │   │   ├── components
+│   │   │   │   ├── buildings-actions.tsx
+│   │   │   │   ├── buildings-data.tsx
+│   │   │   │   ├── buildings-table.tsx
+│   │   │   │   ├── modals
+│   │   │   │   │   ├── delete-building.modal.tsx
+│   │   │   │   │   └── edit-building.modal.tsx
+│   │   │   │   └── tests
+│   │   │   │       └── buildings-table.test.tsx
+│   │   │   ├── pages
+│   │   │   │   ├── Buildings.page.tsx
+│   │   │   │   └── BuildingsContainer.tsx
+│   │   │   └── types
+│   │   │       └── buildings.types.ts
+│   │   ├── LabWorkers
+│   │   │   ├── api
+│   │   │   │   ├── dto
+│   │   │   │   │   └── lab-workers.dto.ts
+│   │   │   │   ├── mutations
+│   │   │   │   │   ├── use-delete-lab-workers.mutation.ts
+│   │   │   │   │   └── use-edit-lab-workers.mutation.ts
+│   │   │   │   └── queries
+│   │   │   │       └── use-lab-workers-list.query.ts
+│   │   │   ├── components
+│   │   │   │   ├── lab-workers-actions.tsx
+│   │   │   │   ├── lab-workers-data.tsx
+│   │   │   │   ├── lab-workers-table.tsx
+│   │   │   │   ├── modals
+│   │   │   │   │   ├── delete-lab-workers.modal.tsx
+│   │   │   │   │   └── edit-lab-workers.modal.tsx
+│   │   │   │   └── tests
+│   │   │   │       └── lab-workers-table.test.tsx
+│   │   │   ├── pages
+│   │   │   │   ├── LabWorkers.page.tsx
+│   │   │   │   └── LabWorkersContainer.tsx
+│   │   │   └── types
+│   │   │       └── lab-workers.types.ts
+│   │   ├── Samples
+│   │   │   ├── api
+│   │   │   │   ├── dto
+│   │   │   │   │   └── samples.dto.ts
+│   │   │   │   ├── mutations
+│   │   │   │   │   ├── use-add-samples.mutation.ts
+│   │   │   │   │   ├── use-delete-samples.mutation.ts
+│   │   │   │   │   └── use-edit-samples.mutation.ts
+│   │   │   │   └── queries
+│   │   │   │       ├── use-sample-details.query.ts
+│   │   │   │       └── use-sample-list.query.ts
+│   │   │   ├── components
+│   │   │   │   ├── modals
+│   │   │   │   │   ├── delete-samples.modal.tsx
+│   │   │   │   │   ├── edit-samples.modal.tsx
+│   │   │   │   │   └── tests
+│   │   │   │   │       └── samples-modals.test.tsx
+│   │   │   │   ├── sample-details-data.tsx
+│   │   │   │   ├── sample-details-preview.tsx
+│   │   │   │   ├── samples-actions.tsx
+│   │   │   │   ├── samples-data.tsx
+│   │   │   │   ├── samples-table.tsx
+│   │   │   │   ├── styles
+│   │   │   │   │   └── dashboard-table.styles.tsx
+│   │   │   │   ├── tests
+│   │   │   │   │   └── samples-table.test.tsx
+│   │   │   │   └── types
+│   │   │   │       └── dashboard-table.types.ts
+│   │   │   ├── pages
+│   │   │   │   ├── SampleDetails.page.tsx
+│   │   │   │   ├── Samples.page.tsx
+│   │   │   │   └── SamplesContainer.tsx
+│   │   │   ├── types
+│   │   │   │   └── samples.types.ts
+│   │   │   └── utils
+│   │   │       └── status-array.ts
+│   │   └── Users
+│   │       ├── api
+│   │       │   ├── dto
+│   │       │   │   └── users.dto.ts
+│   │       │   ├── mutations
+│   │       │   │   ├── use-add-users.mutation.ts
+│   │       │   │   └── use-delete-users.mutation.ts
+│   │       │   └── queries
+│   │       │       └── use-get-users-query.ts
+│   │       ├── components
+│   │       │   ├── modals
+│   │       │   │   ├── add-users.modal.tsx
+│   │       │   │   └── delete-users.modal.tsx
+│   │       │   ├── tests
+│   │       │   │   └── users-table.test.tsx
+│   │       │   ├── users-actions.tsx
+│   │       │   ├── users-data.tsx
+│   │       │   └── users-table.tsx
+│   │       ├── pages
+│   │       │   ├── Users.page.tsx
+│   │       │   └── UsersContainer.tsx
+│   │       ├── types
+│   │       │   └── users.types.ts
+│   │       └── utils
+│   │           └── check-if-forbidden.ts
+│   ├── pages
+│   │   ├── Buildings.page.tsx
+│   │   ├── Dashboard.page.tsx
+│   │   ├── DashboardAdmin.page.tsx
+│   │   ├── DashboardUser.page.tsx
+│   │   ├── Home.page.tsx
+│   │   ├── LabWorkers.page.tsx
+│   │   ├── Samples.page.tsx
+│   │   ├── Users.page.tsx
+│   │   ├── components
+│   │   │   └── dashboard-table
+│   │   │       └── dashboard-table.tsx
+│   │   ├── status
+│   │   │   ├── status-404
+│   │   │   │   └── status-404.tsx
+│   │   │   └── status-500
+│   │   │       └── status-500.tsx
+│   │   └── styles
+│   │       └── Dashboard.styles.tsx
+│   ├── providers
+│   │   ├── app-context.provider.tsx
+│   │   └── roles.enum.ts
+│   ├── routes
+│   │   ├── index.ts
+│   │   ├── router.tsx
+│   │   ├── routes.tsx
+│   │   └── types
+│   │       └── routes.types.ts
+│   ├── test
+│   │   ├── setupTests.ts
+│   │   └── testing-data
+│   │       ├── building.data.ts
+│   │       ├── labWorkers.data.ts
+│   │       ├── samples.data.ts
+│   │       └── user.data.ts
+│   ├── utils
+│   │   └── test-utils.tsx
+│   └── vite-env.d.ts
+├── tsconfig.json
+├── tsconfig.node.json
+├── tsconfig.tsbuildinfo
+└── vite.config.ts
